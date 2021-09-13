@@ -1,5 +1,5 @@
 import {combineReducers, createStore} from "redux";
-import laptopReducer from "./reducer/laptopReducer";
+import laptopReducer from "./reducers/laptopReducer";
 
 
 const rootReducer = combineReducers({
