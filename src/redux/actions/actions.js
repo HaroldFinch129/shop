@@ -1,18 +1,28 @@
-import * as actionTypes from "../types/type";
+import {SELL_COMP, SELL_PHONE, SELL_LAPTOP, SELL_WATCH} from "../types/type";
 
-
-export const sellLaptop = () => {
-    return {type: actionTypes.SELL_LAPTOP,}
-};
-
-export const sellPhone = () => {
-    return {type: actionTypes.SELL_PHONE,}
+export const sellLaptop = (number=1) => {
+    return {
+        type:SELL_LAPTOP,
+        payload:number,
+    };
 };
 
 export const sellWatch = () => {
-    return {type: actionTypes.SELL_WATCH,}
+    return {
+        type:SELL_WATCH,
+    };
+};
+
+export const sellPhone = (number=1) => {
+    return {
+        type:SELL_PHONE,
+        payload:number,
+    };
 };
 
 export const sellComp = () => {
-    return {type: actionTypes.SELL_COMP,}
+    return {
+        type:SELL_COMP,
+    };
 };
+

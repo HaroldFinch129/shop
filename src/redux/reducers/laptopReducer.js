@@ -1,19 +1,18 @@
-import *  as actionTypes from "../types/type";
+import {SELL_LAPTOP} from "../types/type";
 
 const initialState = {
-    numberOfLaptops : 100,
+    numberOfLaptops: 100,
 }
 
 const laptopReducer = (state=initialState, action) => {
     switch (action.type) {
-        case actionTypes.SELL_LAPTOP:
+        case SELL_LAPTOP:
             return {
                 ...state,
-                numberOfLaptops: state.numberOfLaptops -1,
+                numberOfLaptops:state.numberOfLaptops - action.payload,
             }
-    
         default:
-            return state
+            return state;
     }
 }
 

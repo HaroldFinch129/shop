@@ -1,15 +1,14 @@
-import React from 'react'
-import "./App.css"
-import LaptopComp from './components/LaptopComp'
+import './App.css';
+import LaptopComp from "./components/LaptopComp";
+import PhoneComp from './components/PhoneComp';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <LaptopComp/>
+    <div className="App">
+      <LaptopComp />
+      <PhoneComp />
     </div>
-  )
+  );
 }
 
-export default App
-
-
+export default App;

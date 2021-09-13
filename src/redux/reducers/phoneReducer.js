@@ -1,19 +1,18 @@
-import *  as actionTypes from "../types/type";
+import {SELL_PHONE} from "../types/type";
 
 const initialState = {
-    numberOfPhones : 300,
+    numberOfPhones: 300,
 }
 
 const phoneReducer = (state=initialState, action) => {
     switch (action.type) {
-        case actionTypes.SELL_PHONE:
+        case SELL_PHONE:
             return {
                 ...state,
-                numberOfPhones: state.numberOfPhones -1,
+                numberOfPhones:state.numberOfPhones - action.payload,
             }
-    
         default:
-            return state
+            return state;
     }
 }
 
